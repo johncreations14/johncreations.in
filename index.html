@@ -3,42 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>John Creations | Booking Enquiry</title>
+  <title>John Creations</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <img src="assets/logo.png" alt="John Creations Logo" height="80" />
-    <h1>Welcome to John Creations</h1>
-    <p>Wedding Photography & Album Design Studio</p>
+    <a href="/">
+      <img src="assets/johncreations-logo.png" alt="John Creations Logo" class="logo" />
+    </a>
   </header>
 
-  <section>
-    <h2>Book Your Session</h2>
-    <form action="https://hooks.zapier.com/hooks/catch/23565712/ubs7tb5/" method="POST">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" required />
+  <main>
+    <section class="hero">
+      <h1>Welcome to John Creations</h1>
+      <p>Wedding Photography & Album Design Studio</p>
+    </section>
 
-      <label for="email">Your Email</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="phone">Your Phone Number</label>
-      <input type="text" id="phone" name="phone" required />
-
-      <label for="message">Tell us what you need...</label>
-      <textarea id="message" name="message" required></textarea>
-
-      <button type="submit">Submit</button>
-    </form>
-
-    <br />
-    <a href="https://wa.me/919177732291" target="_blank">
-      <button type="button">Chat on WhatsApp</button>
-    </a>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 John Creations. All rights reserved.</p>
-  </footer>
+    <section class="booking-form">
+      <h2>Book Your Session</h2>
+      <form method="POST" action="https://formspree.io/f/xovwywwy">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="tel" name="phone" placeholder="Your Phone Number" required />
+        <textarea name="message" placeholder="Tell us what you need..." required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+      <a href="https://wa.me/919177732291" target="_blank" class="whatsapp-button">Chat on WhatsApp</a>
+    </section>
+  </main>
 </body>
 </html>
