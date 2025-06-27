@@ -1,59 +1,48 @@
 
 body {
-    font-family: sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
-    color: #333;
-    text-align: center;
 }
 header {
-    background: #000;
-    color: gold;
-    padding: 2rem;
+    text-align: center;
+    padding: 20px;
 }
 .logo {
     width: 100px;
 }
 .booking-form {
     background: #fff;
-    padding: 2rem;
-    margin: 2rem;
-    border-radius: 10px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-.booking-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 400px;
-    margin: auto;
-}
-.booking-form input, .booking-form textarea {
-    padding: 1rem;
-    border-radius: 5px;
+.booking-form form input,
+.booking-form form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
     border: 1px solid #ccc;
+    border-radius: 4px;
 }
-.booking-form button {
-    padding: 1rem;
-    background: #000;
-    color: gold;
+.booking-form form button {
+    padding: 10px 20px;
+    background: #28a745;
+    color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
 }
-.whatsapp-button {
-    display: inline-block;
-    margin: 2rem;
-    padding: 1rem 2rem;
-    background-color: #25D366;
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
+.whatsapp-link {
+    text-align: center;
+    margin: 20px;
 }
-footer {
-    background: #222;
-    color: #ccc;
-    padding: 1rem;
-    margin-top: 2rem;
+.whatsapp-link a {
+    color: #25D366;
+    font-weight: bold;
+    text-decoration: none;
 }
