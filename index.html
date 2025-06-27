@@ -1,35 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>John Creations</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Creations</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <a href="/">
-      <img src="assets/johncreations-logo.png" alt="John Creations Logo" class="logo" />
-    </a>
-  </header>
-
-  <main>
+    <header>
+        <img src="https://i.ibb.co/Rp3N2CLG/24-X-15.jpg" alt="John Creations Logo" class="logo">
+    </header>
     <section class="hero">
-      <h1>Welcome to John Creations</h1>
-      <p>Wedding Photography & Album Design Studio</p>
+        <h1>Welcome to John Creations</h1>
+        <p>Wedding Photography & Album Design Studio</p>
     </section>
-
-    <section class="booking-form">
-      <h2>Book Your Session</h2>
-      <form method="POST" action="https://formspree.io/f/xovwywwy">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <input type="tel" name="phone" placeholder="Your Phone Number" required />
-        <textarea name="message" placeholder="Tell us what you need..." required></textarea>
-        <button type="submit">Submit</button>
-      </form>
-      <a href="https://wa.me/919177732291" target="_blank" class="whatsapp-button">Chat on WhatsApp</a>
+    <section class="form-section">
+        <h2>Book Your Session</h2>
+        <form action="https://formspree.io/f/xovwywwy" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Your Phone Number" required>
+            <textarea name="message" placeholder="Tell us what you need..." required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <a href="https://wa.me/919177732291" class="whatsapp-button" target="_blank">Chat on WhatsApp</a>
     </section>
-  </main>
 </body>
 </html>
