@@ -122,20 +122,29 @@
       font-weight: 500;
     }
 
-    .book-now-btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
-      background-color: #0070f3;
-      color: white;
-      font-weight: 600;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: background 0.3s ease;
+    .booking-section {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: #f5f5f7;
     }
 
-    .book-now-btn:hover {
-      background-color: #005bb5;
+    .booking-section iframe {
+      width: 100%;
+      max-width: 640px;
+      height: 800px;
+      border: none;
+    }
+
+    .contact-links a {
+      display: inline-block;
+      margin: 10px;
+      color: #0070f3;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact-links a:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 768px) {
@@ -152,6 +161,10 @@
       .portfolio-item {
         width: 90%;
       }
+
+      .booking-section iframe {
+        height: 1000px;
+      }
     }
   </style>
 </head>
@@ -164,6 +177,7 @@
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#booking">Booking Form</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -202,23 +216,20 @@
     </div>
   </section>
 
+  <!-- Booking Form -->
+  <section id="booking" class="booking-section">
+    <h2>Booking Form</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSerDRlCpLO9bkfICbUD1Lj2C_A6v7k6uGh8aIiIvLoRm0f4kQ/viewform?embedded=true" allowfullscreen></iframe>
+  </section>
+
   <!-- Contact -->
   <section id="contact" class="about">
     <h2>Contact Us</h2>
-    <p>
-      📞 <a href="https://wa.me/919177732291" target="_blank" style="color:#0070f3; text-decoration:none;">+91 91777 32291</a><br>
-      📍 <a href="https://maps.google.com/?q=1-7-690/A, Ram Nagar, Musheerabad, Hyderabad" target="_blank" style="color:#0070f3; text-decoration:none;">
-      1-7-690/A, Ram Nagar, Hyderabad</a><br>
-      📧 <a href="mailto:johncreations14@gmail.com" style="color:#0070f3; text-decoration:none;">johncreations14@gmail.com</a>
-    </p>
-    <br>
-    <a href="#booking-form" class="book-now-btn">📅 Book Now</a>
-  </section>
-
-  <!-- Booking Form (Placeholder) -->
-  <section id="booking-form" class="about">
-    <h2>Booking Form</h2>
-    <p>Coming Soon. Please reach us via WhatsApp or email for now.</p>
+    <div class="contact-links">
+      <a href="https://wa.me/919177732291" target="_blank">Message on WhatsApp</a>
+      <a href="https://maps.app.goo.gl/9VWk3t2AVXo3RDrDA" target="_blank">Find Us on Google Maps</a>
+    </div>
+    <p>Phone: +91 91777 32291<br>Email: johncreations14@gmail.com</p>
   </section>
 
 </body>
