@@ -10,23 +10,68 @@
       background-color: #ffffff;
       color: #000000;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      border-bottom: 1px solid #e0e0e0;
+      background-color: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .nav-links a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #333333;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #007aff;
+    }
+
+    .hero {
       text-align: center;
-    }
-
-    h1 {
       margin-top: 100px;
-      font-size: 2.5em;
-      font-weight: 600;
     }
 
-    p {
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
       font-size: 1.2em;
       color: #555555;
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to John Creations</h1>
-  <p>Photography & Album Design Studio</p>
+
+  <nav>
+    <div class="nav-logo">John Creations</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <h1>Welcome to John Creations</h1>
+    <p>Photography & Album Design Studio</p>
+  </div>
+
 </body>
 </html>
