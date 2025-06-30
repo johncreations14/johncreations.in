@@ -5,50 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>John Creations | Wedding & Album Design Studio</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      background-color: #fff;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #ffffff;
       color: #111;
       line-height: 1.6;
     }
 
-    /* Navigation */
-    .navbar {
-      background-color: #ffffff;
-      border-bottom: 1px solid #e5e5e5;
+    nav {
+      background-color: #fff;
       padding: 15px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
       position: sticky;
       top: 0;
       z-index: 1000;
     }
 
-    .navbar .logo {
-      font-size: 1.5em;
-      font-weight: bold;
-      color: #111;
+    nav h1 {
+      font-size: 1.2em;
     }
 
-    .navbar ul {
+    nav ul {
       list-style: none;
       display: flex;
-      gap: 25px;
-      margin: 0;
-      padding: 0;
+      gap: 30px;
     }
 
-    .navbar ul li a {
+    nav ul li a {
       text-decoration: none;
-      color: #333;
+      color: #111;
       font-weight: 500;
-      transition: color 0.3s ease;
     }
 
-    .navbar ul li a:hover {
-      color: #0071e3;
+    nav ul li a:hover {
+      color: #0070f3;
     }
 
     .hero {
@@ -60,12 +59,30 @@
     .hero h1 {
       font-size: 2.8em;
       margin-bottom: 10px;
-      font-weight: 700;
     }
 
     .hero p {
       font-size: 1.2em;
       color: #555;
+    }
+
+    .about {
+      padding: 80px 20px;
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1em;
+      color: #444;
+      line-height: 1.8;
     }
 
     .portfolio {
@@ -76,23 +93,19 @@
 
     .portfolio h2 {
       font-size: 2em;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
       color: #222;
-      font-weight: 600;
     }
 
     .portfolio-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 40px;
+      gap: 30px;
     }
 
     .portfolio-item {
       width: 300px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
 
     .portfolio-item img {
@@ -101,30 +114,17 @@
       object-fit: cover;
       border-radius: 12px;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
     }
 
     .portfolio-item p {
-      margin-top: 12px;
-      font-size: 1em;
+      margin-top: 10px;
       font-weight: 500;
-      color: #333;
-    }
-
-    .portfolio-item:hover img {
-      transform: scale(1.03);
     }
 
     @media (max-width: 768px) {
-      .navbar {
+      nav ul {
         flex-direction: column;
         align-items: flex-start;
-      }
-
-      .navbar ul {
-        flex-direction: column;
-        gap: 15px;
-        margin-top: 10px;
       }
 
       .portfolio-grid {
@@ -140,25 +140,34 @@
 </head>
 <body>
 
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="logo">John Creations</div>
+  <!-- Navigation -->
+  <nav>
+    <h1>John Creations</h1>
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Portfolio</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
+  <!-- Hero -->
+  <section id="home" class="hero">
     <h1>Welcome to John Creations</h1>
     <p>Photography & Album Design Studio</p>
   </section>
 
-  <!-- Portfolio Section -->
-  <section class="portfolio">
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About John Creations</h2>
+    <p>
+      At John Creations, we specialize in wedding photography, traditional and candid album designing, baby and maternity shoots, and custom photo retouching.
+      Our passion is to capture real emotions, vibrant moments, and create timeless memories through creative visuals and storytelling albums.
+    </p>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="portfolio">
     <h2>Our Portfolio</h2>
     <div class="portfolio-grid">
       <div class="portfolio-item">
@@ -176,5 +185,12 @@
     </div>
   </section>
 
+  <!-- Contact (optional placeholder for now) -->
+  <section id="contact" class="about">
+    <h2>Contact Us</h2>
+    <p>Phone: +91 91777 32291<br>Email: gosujohn1997@gmail.com</p>
+  </section>
+
 </body>
 </html>
+
