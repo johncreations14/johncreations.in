@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>John Creations | Wedding & Album Design Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -12,7 +15,7 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      font-family: 'Poppins', sans-serif;
       background-color: #ffffff;
       color: #111;
       line-height: 1.6;
@@ -32,7 +35,9 @@
     }
 
     nav h1 {
-      font-size: 1.2em;
+      font-size: 1.4em;
+      font-weight: 600;
+      animation: fadeInDown 1s ease-in-out;
     }
 
     nav ul {
@@ -52,10 +57,10 @@
     }
 
     .hero {
-      padding: 100px 20px 60px;
+      padding: 80px 20px 60px;
       text-align: center;
       background-color: #f5f5f7;
-      animation: fadeIn 2s ease-in-out;
+      animation: fadeIn 1.2s ease-in-out;
     }
 
     .hero h1 {
@@ -68,14 +73,13 @@
       color: #555;
     }
 
-    .about {
+    .about, .contact {
       padding: 80px 20px;
       background-color: #ffffff;
       text-align: center;
-      animation: fadeIn 2s ease-in-out;
     }
 
-    .about h2 {
+    .about h2, .contact h2 {
       font-size: 2em;
       margin-bottom: 20px;
     }
@@ -92,7 +96,6 @@
       padding: 60px 40px;
       background-color: #ffffff;
       text-align: center;
-      animation: fadeIn 2s ease-in-out;
     }
 
     .portfolio h2 {
@@ -110,11 +113,7 @@
 
     .portfolio-item {
       width: 300px;
-      transition: transform 0.3s ease;
-    }
-
-    .portfolio-item:hover {
-      transform: scale(1.05);
+      animation: fadeInUp 1s ease-in-out;
     }
 
     .portfolio-item img {
@@ -130,48 +129,51 @@
       font-weight: 500;
     }
 
-    .contact {
-      padding: 60px 20px;
-      background-color: #f5f5f7;
-      text-align: center;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    .contact h2 {
-      font-size: 2em;
-      margin-bottom: 30px;
-    }
-
     .contact-buttons {
+      margin-top: 30px;
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
+      flex-wrap: wrap;
       gap: 15px;
     }
 
     .contact-buttons a {
-      text-decoration: none;
-      background-color: #4a63f3;
+      background-color: #5c6bc0;
       color: white;
-      padding: 10px 20px;
+      padding: 12px 20px;
       border-radius: 8px;
+      text-decoration: none;
       font-weight: 500;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s;
     }
 
     .contact-buttons a:hover {
-      background-color: #1a3df0;
+      background-color: #3949ab;
+    }
+
+    iframe {
+      border: 0;
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+      margin: 30px auto 0;
+      display: block;
+      border-radius: 8px;
     }
 
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
     }
 
     @media (max-width: 768px) {
@@ -192,7 +194,6 @@
   </style>
 </head>
 <body>
-
   <!-- Navigation -->
   <nav>
     <h1>John Creations</h1>
@@ -214,8 +215,7 @@
   <section id="about" class="about">
     <h2>About John Creations</h2>
     <p>
-      At John Creations, we specialize in wedding photography, traditional and candid album designing, baby and maternity shoots, and custom photo retouching.
-      Our passion is to capture real emotions, vibrant moments, and create timeless memories through creative visuals and storytelling albums.
+      At John Creations, we specialize in wedding photography, traditional and candid album designing, baby and maternity shoots, and custom photo retouching. Our passion is to capture real emotions, vibrant moments, and create timeless memories through creative visuals and storytelling albums.
     </p>
   </section>
 
@@ -238,27 +238,16 @@
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- Contact Section -->
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
     <div class="contact-buttons">
       <a href="https://wa.me/919177732291" target="_blank">+91 91777 32291 (WhatsApp)</a>
       <a href="mailto:johncreations14@gmail.com">johncreations14@gmail.com</a>
-      <!-- Embedded Google Map -->
-<div style="text-align: center; margin-top: 40px;">
-  <h3>Our Location</h3>
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.0170154552715!2d78.5038751!3d17.411173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99cce74cf709%3A0x8d617d1bf7369a93!2sJohn%20Creations!5e0!3m2!1sen!2sin!4v1720095103115!5m2!1sen!2sin" 
-    width="100%" 
-    height="350" 
-    style="border:0; border-radius:12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" 
-    allowfullscreen="" 
-    loading="lazy" 
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</div>
-
+      <a href="https://maps.app.goo.gl/cVnTAWFhnJbosVg59" target="_blank">Google Maps</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSerDRlCpLO9bkfICbUD1Lj2C_A6v7k6uGh8aIiIvLoRm0f4kQ/viewform" target="_blank">Book Now</a>
     </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.4106553465314!2d78.5038751!3d17.4111781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99cce74cf709%3A0x8d617d1bf7369a93!2sJohn%20Creations!5e0!3m2!1sen!2sin!4v1719797106236!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </section>
 
 </body>
