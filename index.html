@@ -45,36 +45,10 @@
       text-decoration: none;
       color: #111;
       font-weight: 500;
-      transition: color 0.3s;
     }
 
     nav ul li a:hover {
       color: #0070f3;
-    }
-
-    section {
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeUp 0.8s ease-out forwards;
-    }
-
-    section:nth-child(2) {
-      animation-delay: 0.3s;
-    }
-
-    section:nth-child(3) {
-      animation-delay: 0.6s;
-    }
-
-    section:nth-child(4) {
-      animation-delay: 0.9s;
-    }
-
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: none;
-      }
     }
 
     .hero {
@@ -141,16 +115,27 @@
       object-fit: cover;
       border-radius: 12px;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s;
-    }
-
-    .portfolio-item img:hover {
-      transform: scale(1.05);
     }
 
     .portfolio-item p {
       margin-top: 10px;
       font-weight: 500;
+    }
+
+    .book-now-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #0070f3;
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    .book-now-btn:hover {
+      background-color: #005bb5;
     }
 
     @media (max-width: 768px) {
@@ -166,10 +151,6 @@
 
       .portfolio-item {
         width: 90%;
-      }
-
-      .hero h1 {
-        font-size: 2em;
       }
     }
   </style>
@@ -224,7 +205,20 @@
   <!-- Contact -->
   <section id="contact" class="about">
     <h2>Contact Us</h2>
-    <p>Phone: +91 91777 32291<br>Email: johncreations14@gmail.com</p>
+    <p>
+      📞 <a href="https://wa.me/919177732291" target="_blank" style="color:#0070f3; text-decoration:none;">+91 91777 32291</a><br>
+      📍 <a href="https://maps.google.com/?q=1-7-690/A, Ram Nagar, Musheerabad, Hyderabad" target="_blank" style="color:#0070f3; text-decoration:none;">
+      1-7-690/A, Ram Nagar, Hyderabad</a><br>
+      📧 <a href="mailto:johncreations14@gmail.com" style="color:#0070f3; text-decoration:none;">johncreations14@gmail.com</a>
+    </p>
+    <br>
+    <a href="#booking-form" class="book-now-btn">📅 Book Now</a>
+  </section>
+
+  <!-- Booking Form (Placeholder) -->
+  <section id="booking-form" class="about">
+    <h2>Booking Form</h2>
+    <p>Coming Soon. Please reach us via WhatsApp or email for now.</p>
   </section>
 
 </body>
