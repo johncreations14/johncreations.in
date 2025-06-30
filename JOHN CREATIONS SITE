@@ -1,0 +1,31 @@
+import React from "react";
+import { Button } from "@/components/ui/button";
+
+export default function HomePage() {
+  return (
+    <div className="bg-black text-white min-h-screen">
+      {/* Banner Section */}
+      <header className="flex flex-col items-center justify-center py-12 px-4">
+        <img src="/JOHN%20CREATIONS.jpg" alt="John Creations Banner" className="w-full max-w-5xl" />
+      </header>
+
+      {/* Logo Section */}
+      <section className="flex justify-center py-10">
+        <img src="/LOGO%20FINAL%20a.png" alt="John Creations Logo" className="w-60 h-auto" />
+      </section>
+
+      {/* Navigation Buttons */}
+      <nav className="flex justify-center space-x-6 py-6">
+        <Button variant="outline" className="text-white border-white hover:bg-white hover:text-black">
+          Home
+        </Button>
+        <Button variant="outline" className="text-white border-white hover:bg-white hover:text-black">
+          Portfolio
+        </Button>
+        <Button variant="outline" className="text-white border-white hover:bg-white hover:text-black">
+          Contact
+        </Button>
+      </nav>
+    </div>
+  );
+}
