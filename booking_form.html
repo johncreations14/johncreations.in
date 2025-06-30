@@ -1,0 +1,20 @@
+<!-- Booking Form Section -->
+<section id="booking" style="padding: 2rem; background: #f9f9f9;">
+  <h2 style="text-align: center;">Book Your Session</h2>
+  <form style="max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 1rem;" action="https://formspree.io/f/your-form-id" method="POST">
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="tel" name="phone" placeholder="Mobile Number" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <select name="service" required>
+      <option value="">Select Service</option>
+      <option value="Wedding Photography">Wedding Photography</option>
+      <option value="Album Designing">Album Designing</option>
+      <option value="Pre-Wedding Shoots">Pre-Wedding Shoots</option>
+      <option value="Baby & Maternity Shoots">Baby & Maternity Shoots</option>
+      <option value="Photo Retouching">Photo Retouching</option>
+    </select>
+    <input type="date" name="preferred_date" required>
+    <textarea name="message" placeholder="Additional Details (optional)"></textarea>
+    <button type="submit">Submit Booking</button>
+  </form>
+</section>
