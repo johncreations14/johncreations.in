@@ -17,7 +17,6 @@
       color: #111;
       line-height: 1.6;
       scroll-behavior: smooth;
-      transition: all 0.3s ease-in-out;
     }
 
     nav {
@@ -46,31 +45,17 @@
       text-decoration: none;
       color: #111;
       font-weight: 500;
-      transition: color 0.3s ease;
     }
 
     nav ul li a:hover {
       color: #0070f3;
     }
 
-    section {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeSlideIn 1s forwards;
-    }
-
-    @keyframes fadeSlideIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
     .hero {
       padding: 100px 20px 60px;
       text-align: center;
       background-color: #f5f5f7;
-      animation-delay: 0.2s;
+      animation: fadeIn 2s ease-in-out;
     }
 
     .hero h1 {
@@ -87,7 +72,7 @@
       padding: 80px 20px;
       background-color: #ffffff;
       text-align: center;
-      animation-delay: 0.4s;
+      animation: fadeIn 2s ease-in-out;
     }
 
     .about h2 {
@@ -107,7 +92,7 @@
       padding: 60px 40px;
       background-color: #ffffff;
       text-align: center;
-      animation-delay: 0.6s;
+      animation: fadeIn 2s ease-in-out;
     }
 
     .portfolio h2 {
@@ -125,6 +110,11 @@
 
     .portfolio-item {
       width: 300px;
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-item:hover {
+      transform: scale(1.05);
     }
 
     .portfolio-item img {
@@ -141,34 +131,47 @@
     }
 
     .contact {
-      padding: 80px 20px;
+      padding: 60px 20px;
+      background-color: #f5f5f7;
       text-align: center;
-      background: #f5f5f5;
-      animation-delay: 0.8s;
+      animation: fadeIn 2s ease-in-out;
     }
 
     .contact h2 {
       font-size: 2em;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
 
-    .contact p {
-      margin-bottom: 10px;
+    .contact-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
     }
 
-    .contact a {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      background-color: #0070f3;
-      color: white;
+    .contact-buttons a {
       text-decoration: none;
-      border-radius: 5px;
+      background-color: #4a63f3;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 500;
       transition: background-color 0.3s ease;
     }
 
-    .contact a:hover {
-      background-color: #005ac1;
+    .contact-buttons a:hover {
+      background-color: #1a3df0;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @media (max-width: 768px) {
@@ -238,10 +241,12 @@
   <!-- Contact -->
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
-    <p>Phone: <a href="https://wa.me/919177732291" target="_blank">+91 91777 32291 (WhatsApp)</a></p>
-    <p>Email: <a href="mailto:johncreations14@gmail.com">johncreations14@gmail.com</a></p>
-    <p>Location: <a href="https://www.google.com/maps/place/John+Creations/@17.4111781,78.5038751,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb99cce74cf709:0x8d617d1bf7369a93!8m2!3d17.411173!4d78.50645!16s%2Fg%2F11xkx_dw_3?entry=ttu" target="_blank">Google Maps</a></p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSerDRlCpLO9bkfICbUD1Lj2C_A6v7k6uGh8aIiIvLoRm0f4kQ/viewform" target="_blank">Book Now</a>
+    <div class="contact-buttons">
+      <a href="https://wa.me/919177732291" target="_blank">+91 91777 32291 (WhatsApp)</a>
+      <a href="mailto:johncreations14@gmail.com">johncreations14@gmail.com</a>
+      <a href="https://www.google.com/maps/place/John+Creations/@17.4111781,78.5038751,17z" target="_blank">Google Maps</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSerDRlCpLO9bkfICbUD1Lj2C_A6v7k6uGh8aIiIvLoRm0f4kQ/viewform" target="_blank">Book Now</a>
+    </div>
   </section>
 
 </body>
