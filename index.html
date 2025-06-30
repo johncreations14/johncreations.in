@@ -51,6 +51,17 @@
       color: #0070f3;
     }
 
+    .hero, .about, .portfolio, #contact {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease-out;
+    }
+
+    .show {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+
     .hero {
       padding: 100px 20px 60px;
       text-align: center;
@@ -192,5 +203,18 @@
     <p>Phone: +91 91777 32291<br>Email: johncreations14@gmail.com</p>
   </section>
 
+  <!-- Animation Script -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+
+    document.querySelectorAll('.hero, .about, .portfolio, #contact')
+      .forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
