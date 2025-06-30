@@ -45,21 +45,36 @@
       text-decoration: none;
       color: #111;
       font-weight: 500;
+      transition: color 0.3s;
     }
 
     nav ul li a:hover {
       color: #0070f3;
     }
 
-    .hero, .about, .portfolio, #contact {
+    section {
       opacity: 0;
-      transform: translateY(20px);
-      transition: all 1s ease-out;
+      transform: translateY(30px);
+      animation: fadeUp 0.8s ease-out forwards;
     }
 
-    .show {
-      opacity: 1 !important;
-      transform: translateY(0) !important;
+    section:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+
+    section:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+
+    section:nth-child(4) {
+      animation-delay: 0.9s;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: none;
+      }
     }
 
     .hero {
@@ -126,6 +141,11 @@
       object-fit: cover;
       border-radius: 12px;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .portfolio-item img:hover {
+      transform: scale(1.05);
     }
 
     .portfolio-item p {
@@ -146,6 +166,10 @@
 
       .portfolio-item {
         width: 90%;
+      }
+
+      .hero h1 {
+        font-size: 2em;
       }
     }
   </style>
@@ -203,18 +227,5 @@
     <p>Phone: +91 91777 32291<br>Email: johncreations14@gmail.com</p>
   </section>
 
-  <!-- Animation Script -->
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
-      });
-    });
-
-    document.querySelectorAll('.hero, .about, .portfolio, #contact')
-      .forEach(el => observer.observe(el));
-  </script>
 </body>
 </html>
