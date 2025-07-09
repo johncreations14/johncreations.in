@@ -1,10 +1,237 @@
-<style>
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    color: #111;
-    background: #fff;
-  }
-  img { display: block; width:100%; height:auto; }
-  a { text-decoration:none; color: inherit; }
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>John Creations | Wedding & Album Design Studio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #ffffff;
+      color: #111;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      background-color: #fff;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav h1 {
+      font-size: 1.2em;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #111;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      color: #0070f3;
+    }
+
+    .hero {
+      padding: 100px 20px 60px;
+      text-align: center;
+      background-color: #f5f5f7;
+      animation: fadeIn 2s ease;
+    }
+
+    .hero h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      color: #555;
+    }
+
+    .about {
+      padding: 80px 20px;
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1em;
+      color: #444;
+      line-height: 1.8;
+    }
+
+    .portfolio {
+      padding: 60px 40px;
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    .portfolio h2 {
+      font-size: 2em;
+      margin-bottom: 30px;
+      color: #222;
+    }
+
+    .portfolio-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .portfolio-item {
+      width: 300px;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-item img:hover {
+      transform: scale(1.05);
+    }
+
+    .portfolio-item p {
+      margin-top: 10px;
+      font-weight: 500;
+    }
+
+    .contact-section {
+      text-align: center;
+      margin: 60px auto;
+      padding: 20px;
+    }
+
+    .contact-section a {
+      margin: 10px;
+      background: #111;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 4px;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    iframe {
+      width: 90%;
+      max-width: 600px;
+      height: 500px;
+      border: none;
+      margin: 40px auto;
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .portfolio-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .portfolio-item {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1>John Creations</h1>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="hero">
+    <h1>Welcome to John Creations</h1>
+    <p>Photography & Album Design Studio</p>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About John Creations</h2>
+    <p>
+      At John Creations, we specialize in wedding photography, traditional and candid album designing, baby and maternity shoots, and custom photo retouching.
+      Our passion is to capture real emotions, vibrant moments, and create timeless memories through creative visuals and storytelling albums.
+    </p>
+  </section>
+
+  <section id="portfolio" class="portfolio">
+    <h2>Our Portfolio</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="Wedding Highlights.jpg" alt="Wedding Highlights">
+        <p>Wedding Highlights</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="Baby Shoot.jpg" alt="Baby Shoot">
+        <p>Baby Shoot</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="Pre wedding.jpg" alt="Pre Wedding">
+        <p>Pre Wedding</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <a href="https://wa.me/919177732291" target="_blank">WhatsApp</a>
+    <a href="https://maps.app.goo.gl/cVnTAWFhnJbosVg59" target="_blank">Location</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSerDRlCpLO9bkfICbUD1Lj2C_A6v7k6uGh8aIiIvLoRm0f4kQ/viewform" target="_blank">Book Now</a>
+  </section>
+
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSerDRlCpLO9bkfICbUD1Lj2C_A6v7k6uGh8aIiIvLoRm0f4kQ/viewform?embedded=true" title="Booking Form">Loading…</iframe>
+
+</body>
+</html>
