@@ -32,7 +32,7 @@ Visit us at: [https://johncreations.in](https://johncreations.in)
 
 ## 📧 Contact
 - 📞 **Phone:** +91 91777 32291
-- ✉️ **Email:** gosujohn1997@gmail.com
+- ✉️ **Email:** johncreations14@gmail.com
 - 📍 **Address:** Ram Nagar, Musheerabad, Hyderabad - 500020
 
 ---
